@@ -1,17 +1,17 @@
 <script>
 import Author from './Author.vue'
-import Sites from './sites.vue'
+import Sitesbook from './Sitesbook.vue'
 export default {
     components: {
         Author,
-        Sites
+        Sitesbook
     }
 
 }
 </script>
 <template lang="">
     <Author />
-    <Sites />
+    <Sitesbook />
 </template>
 <style lang="scss" scoped>
 
