@@ -1,10 +1,12 @@
 <script>
 import Author from './Author.vue'
 import Sitesbook from './Sitesbook.vue'
+import Audiobook from './Audiobook.vue'
 export default {
     components: {
         Author,
-        Sitesbook
+        Sitesbook,
+        Audiobook
     }
 
 }
@@ -12,6 +14,7 @@ export default {
 <template lang="">
     <Author />
     <Sitesbook />
+    <Audiobook />
 </template>
 <style lang="scss" scoped>
 
