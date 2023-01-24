@@ -1,0 +1,15 @@
+@use './variables' as *;
+
+@mixin style-btn {
+    padding: 11px 30px;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    font-family: $dm-sans;
+    background-color: $secondary-color;
+    font-size: 14px;
+
+    &:hover {
+        background-color: #367d64;
+    }
+}
