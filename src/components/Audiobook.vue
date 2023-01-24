@@ -14,7 +14,7 @@ export default {
                     <h2>New Audiobook</h2>
                     <h6>NO TIME TO READ? NO PROBLEM. LISTEN TO IT</h6>
                     <p>Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt. Maecenas eleifend congue cursus.</p>
-                    <button><i class="fa-brands fa-audible"></i>Buy This On Audible</button>
+                    <button><i class="fa-brands fa-audible"></i> Buy This On Audible</button>
                 </div>
                 
             </div>
