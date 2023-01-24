@@ -89,8 +89,9 @@ header {
     width: 100%;
     height: 643px;
     background-image: url(../../public/hero-07-2x.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .container-fluid {
