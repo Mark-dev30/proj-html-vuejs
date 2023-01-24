@@ -14,6 +14,7 @@ export default {
                     <h2>New Audiobook</h2>
                     <h6>NO TIME TO READ? NO PROBLEM. LISTEN TO IT</h6>
                     <p>Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt. Maecenas eleifend congue cursus.</p>
+                    <button><i class="fa-brands fa-audible"></i>Buy This On Audible</button>
                 </div>
                 
             </div>
@@ -22,6 +23,7 @@ export default {
 </template>
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
 
 .container-fluid {
     background-image: url(../../public/banner.jpg);
@@ -40,7 +42,6 @@ export default {
             }
 
             .info-audiobook {
-                margin-bottom: 3rem;
                 padding: 0 24px;
 
                 h2 {
@@ -62,6 +63,11 @@ export default {
                     color: $grey-color;
                     font-size: 1.1rem;
                     line-height: 1.5rem;
+                }
+
+                button {
+                    margin-top: 2rem;
+                    @include style-btn
                 }
             }
         }
