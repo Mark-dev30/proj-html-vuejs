@@ -4,13 +4,15 @@ import Author from './Author.vue'
 import Sitesbook from './Sitesbook.vue'
 import Audiobook from './Audiobook.vue'
 import Events from './Events.vue'
+import Newsletter from './Newsletter.vue'
 export default {
     components: {
         Author,
         Sitesbook,
         Audiobook,
         Critics,
-        Events
+        Events,
+        Newsletter
     }
 }
 </script>
@@ -20,6 +22,7 @@ export default {
     <Audiobook />
     <Critics />
     <Events />
+    <Newsletter />
 </template>
 <style lang="scss" scoped>
 
