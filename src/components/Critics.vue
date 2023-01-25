@@ -5,7 +5,7 @@ export default {
 </script>
 <template lang="">
     <div class="container-fluid">
-        <div class="row margin-auto">
+        <div class="row margin-auto pb-5">
             <div class="col-10">
                 <h2>What The Critics Say</h2>
                 <h6>TESTIMONIALS FROM AROUND THE WORLD</h6>
@@ -114,6 +114,11 @@ export default {
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 0 0 15% 0;
+        transition: transform .30s;
+
+        &:hover {
+            transform: scale(1.02);
+        }
 
         .info-card {
             padding: 12%;

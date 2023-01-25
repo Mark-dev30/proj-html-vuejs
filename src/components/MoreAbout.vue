@@ -93,6 +93,12 @@ export default {
     .card-latestbook,
     .card-booksigning {
         border-radius: 0 0 15% 0;
+        transition: transform .30s;
+
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: rgba(80, 80, 88, 0.5) 0px 7px 29px 0px;
+        }
     }
 
     .card-info {

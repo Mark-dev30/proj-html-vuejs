@@ -38,7 +38,7 @@ export default {
 
         .col-4 {
             img {
-                width: 90%;
+                max-width: 24rem;
             }
 
             .info-audiobook {

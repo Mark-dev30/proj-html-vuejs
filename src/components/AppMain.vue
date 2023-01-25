@@ -6,6 +6,7 @@ import Audiobook from './Audiobook.vue'
 import Events from './Events.vue'
 import Newsletter from './Newsletter.vue'
 import MoreAbout from './MoreAbout.vue'
+import Articles from './Articles.vue'
 export default {
     components: {
         Author,
@@ -14,7 +15,8 @@ export default {
         Critics,
         Events,
         Newsletter,
-        MoreAbout
+        MoreAbout,
+        Articles
     }
 }
 </script>
@@ -26,6 +28,7 @@ export default {
     <Events />
     <Newsletter />
     <MoreAbout />
+    <Articles />
 </template>
 <style lang="scss" scoped>
 
