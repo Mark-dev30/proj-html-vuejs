@@ -32,12 +32,12 @@ export default {
                     </div>
                     <div v-else class="contact">
                         <h5>{{item.data.title}}</h5>
-                        <ul class="p-0">
+                        <ul class="p-0 m-0">
                             <li v-for="list in item.data.content">
                                 {{list}}
                             </li>
                         </ul>
-
+                        <span v-for="icon in item.data.icons"><a href="#"><i :class="icon"></i></a></span>
                     </div>
                 </div>
             </div>
@@ -65,6 +65,11 @@ footer {
     height: 100%;
 }
 
+.row:first-child {
+    height: 85%;
+    padding: 5rem 0 0 1rem;
+}
+
 .about-me,
 .useful,
 .contact,
@@ -85,16 +90,30 @@ footer {
         color: $grey-color;
     }
 
-    i {
-        font-size: 13px;
-    }
-
     a {
         text-decoration: none;
     }
 
     li {
         list-style: none;
+    }
+
+    ul,
+    p {
+        line-height: 31px;
+    }
+}
+
+.useful {
+    i {
+        font-size: 13px;
+    }
+}
+
+.contact {
+    i {
+        font-size: 17px;
+        margin: 20px 20px 0 0;
     }
 }
 </style>

@@ -21,14 +21,17 @@ export default {
                 <div class="col-8 d-flex">
                     <div class="content-menu">
                         <ul class="d-flex p-0">
-                            <li v-for="(item,index) in list" class="d-flex align-items-center">
-                                <a v-if="index == 5 " href="#">
-                                    {{item}}
-                                    <i class="fa-solid fa-chevron-down"></i>
+                            <li v-for="(item,index) in list" class="d-flex align-items-center" :class="item.active == true ? 'active' : ''">
+                                <a  v-if="item._type === 'title'"   href="#">
+                                    {{item.data.title}}
                                 </a>
-                                <a v-else-if="index == 7" href="#">
-                                    <i class="fa-solid fa-cart-shopping"></i></a>
-                                <a href="#" v-else>{{item}}</a>
+                                <a v-else-if="item._type === 'list'" href="#">
+                                    {{item.data.title}}
+                                    <i :class="item.data.icon"></i>
+                                </a>
+                                <a href="#" v-else>
+                                    <i :class="item.data.title"></i>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -38,15 +41,15 @@ export default {
                 <div class="col-7">
                     <div class="content-info mt-4">
                         <h1>Damon Vaughn</h1>
-                        <h2>Best-selling author and the most influential public intellectual in the western world right now.</h2>
+                        <h2>Best-Selling Author And The Most Influential Public Intellectual In The Western World Right Now.</h2>
                         <p>- The New York Times</p>
                     </div>
                 </div>
-                <div class="col-5 d-flex align-items-end">
+                <div class="col-5 d-flex align-items-end p-0">
                     <div class="content-book bg-white p-5">
                         <div class="container">
                             <div class="row">
-                                <div class="col-6 padding-20">
+                                <div class="col-6 ">
                                     <div class="img-book">
                                         <img src="../../public/book-widget.png" alt="book">
                                     </div>    
@@ -54,7 +57,7 @@ export default {
                                 <div class="col-6">
                                     <div class="info-book">
                                         <h4>Latest Book Release</h4>
-                                        <h6>D. VAUGHN AUTOBIOGRAPHI</h6>
+                                        <h6>D. VAUGHN AUTOBIOGRAPHY</h6>
                                         <p>Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt. Maecenas eleifend congue cursus.</p>
                                     </div>
                                 </div>
@@ -69,7 +72,7 @@ export default {
                                 <div class="col-6">
                                     <button>
                                         <i class="fa-brands fa-apple"></i>
-                                        Buy On AppStore
+                                        Buy On App Store
                                     </button>
                                 </div>
                             </div>
@@ -88,7 +91,7 @@ export default {
 header {
     width: 100%;
     height: 643px;
-    background-image: url(../../public/hero-07-2x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.60)), url(../../public/hero-07-2x.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -123,6 +126,15 @@ header {
         li {
             list-style-type: none;
             margin-right: 30px;
+            font-family: $dm-sans;
+
+            &:hover {
+                border-top: 5px solid $primary-color;
+
+                a {
+                    color: $primary-color;
+                }
+            }
 
             a {
                 text-decoration: none;
@@ -145,12 +157,14 @@ header {
         font-family: 'DM Serif Display', serif;
         font-size: 3rem;
         color: white;
+        line-height: 4rem;
     }
 
     p {
         font-family: 'DM Sans', sans-serif;
         font-size: 1.5rem;
-        color: white;
+        color: $grey-color;
+        margin-top: 2rem;
     }
 }
 
@@ -160,15 +174,41 @@ header {
     }
 }
 
+.info-book {
+
+    h4,
+    h6 {
+        font-family: $dm-serif-display;
+    }
+
+    h6 {
+        color: $primary-color;
+    }
+
+    p {
+        font-family: $dm-sans;
+    }
+}
+
 .height-78 {
     height: 78%;
 }
 
 button {
-    font-size: 13px;
+    font-size: 14px;
     padding: 8px 38px;
     background-color: white;
     border: 1px solid $secondary-color;
     border-radius: 5px;
+
+    &:hover {
+        background-color: $secondary-color;
+        color: white;
+    }
+}
+
+.active {
+    border-top: 5px solid $primary-color;
+
 }
 </style>

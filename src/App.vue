@@ -20,7 +20,7 @@ export default {
 </script>
 <template lang="">
   <div class="container-page">
-    <AppHeader :list="store.menu"/>
+    <AppHeader :list="store.menu_header"/>
     <AppMain />
     <AppFooter :list_footer="store.menu_footer"/>
   </div>

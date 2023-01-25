@@ -110,7 +110,7 @@ export default {
     }
 
     .card-author {
-        background-image: url(../../public/testimonial2-2x.jpg);
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(../../public/testimonial2-2x.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 0 0 15% 0;
