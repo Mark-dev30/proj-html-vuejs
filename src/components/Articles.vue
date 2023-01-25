@@ -56,6 +56,7 @@ export default {
 
 .container-fluid {
     background-color: $pink-color;
+    padding: 5rem 0;
 
     .margin-auto {
         width: 80%;

@@ -17,6 +17,7 @@ export default {
             <div class="col-3 p-0">
                 <div class="card-img">
                     <img src="../../public/event-05-400x240.jpg" alt="event-05">
+                    <div class="overlay"></div>
                 </div>
                 <div class="card-info text-center">
                     <h3><a href="#">Chicago Book Signing</a></h3>
@@ -27,6 +28,7 @@ export default {
             <div class="col-3 p-0">
                 <div class="card-img">
                     <img src="../../public/event-04-400x240.jpg" alt="event-04">
+                    <div class="overlay"></div>
                 </div>
                 <div class="card-info text-center">
                     <h3><a href="#">Meet & Greet With Amanda</a></h3>
@@ -37,6 +39,7 @@ export default {
             <div class="col-3 p-0">
                 <div class="card-img">
                     <img src="../../public/event-07-400x240.jpg" alt="event-07">
+                    <div class="overlay"></div>
                 </div>
                 <div class="card-info text-center">
                     <h3><a href="#">Open Book: Dialogues</a></h3>
@@ -82,9 +85,31 @@ export default {
     background-color: white;
 
     .card-img {
+        position: relative;
 
         img {
             width: 100%;
+
+
+            &:hover .overlay {
+                opacity: 1;
+            }
+
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.3);
+            opacity: 0;
+            top: 0;
+            left: 0;
+            transition: 1s;
+
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 

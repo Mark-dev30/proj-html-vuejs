@@ -19,15 +19,24 @@ export default {
                     </div>
                 </div>
                 <div class="col-8 d-flex">
+                    <!-- Menu -->
                     <div class="content-menu">
                         <ul class="d-flex p-0">
+                            <!-- Post the list after checking the array -->
                             <li v-for="(item,index) in list" class="d-flex align-items-center" :class="item.active == true ? 'active' : ''">
                                 <a  v-if="item._type === 'title'"   href="#">
                                     {{item.data.title}}
                                 </a>
-                                <a v-else-if="item._type === 'list'" href="#">
+                                <a v-else-if="item._type === 'list'" href="#" class="dropdown">
                                     {{item.data.title}}
                                     <i :class="item.data.icon"></i>
+                                    <div class="dropdown-menu">
+                                        <div v-for="list in item.data.content" class="content-menu d-flex flex-column align-items-center justify-content-center">
+                                            <span>
+                                                {{list}}
+                                            </span>
+                                        </div>
+                                    </div>
                                 </a>
                                 <a href="#" v-else>
                                     <i :class="item.data.title"></i>
@@ -39,12 +48,14 @@ export default {
             </div>
             <div class="row height-78">
                 <div class="col-7">
+                    <!-- Info Header -->
                     <div class="content-info mt-4">
                         <h1>Damon Vaughn</h1>
                         <h2>Best-Selling Author And The Most Influential Public Intellectual In The Western World Right Now.</h2>
                         <p>- The New York Times</p>
                     </div>
                 </div>
+                <!--Latest Book Release -->
                 <div class="col-5 d-flex align-items-end p-0">
                     <div class="content-book bg-white p-5">
                         <div class="container">
@@ -62,6 +73,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
+                            <!-- Button -->
                             <div class="row justify-content-center">
                                 <div class="col-6">
                                     <button>
@@ -210,5 +222,42 @@ button {
 .active {
     border-top: 5px solid $primary-color;
 
+}
+
+.dropdown {
+    position: relative;
+
+
+    .dropdown-menu {
+        background-color: transparent;
+        border: none;
+        display: none;
+        position: absolute;
+        top: 20px;
+
+        .content-menu {
+            width: 130px;
+            height: 50px;
+            background-color: black;
+
+            &:hover {
+                background-color: $secondary-color;
+            }
+        }
+
+        span {
+            font-family: $dm-sans;
+            color: white;
+            display: block;
+            font-size: 0.8rem;
+
+
+        }
+
+    }
+
+    &:hover .dropdown-menu {
+        display: block;
+    }
 }
 </style>

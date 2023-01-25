@@ -6,6 +6,7 @@ export default {
 }
 </script>
 <template lang="">
+    <!-- Footer -->
     <footer>
         <div class="container-fluid">
             <div class="row">
@@ -14,6 +15,7 @@ export default {
                         <img src="../assets/author-logo-round-200x205.png" alt="logo">
                     </div>
                 </div>
+                <!-- Post the columns after checking the array -->
                 <div v-for="item in list_footer" class="col-3">
                     <div v-if="item._type === 'paragraph'" class="about-me">
                         <h5>{{item.data.title}}</h5>
